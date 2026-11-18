@@ -1,4 +1,25 @@
-.env
-.idea/
-.venv/
+# Arquivos e pastas geradas pelo Python
 __pycache__/
+*.py[oc]
+*.py[cod]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Ambientes virtuais
+.venv/
+
+# Testes e ferramentas
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# Editor e sistema
+.idea/
+
+# Arquivos de ambiente
+.env
+
+# Arquivos de log
+*.log
