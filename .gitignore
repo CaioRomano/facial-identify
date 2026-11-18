@@ -23,6 +23,3 @@ wheels/
 
 # Arquivos de log
 *.log
-
-# Workflow do Github
-docs/
