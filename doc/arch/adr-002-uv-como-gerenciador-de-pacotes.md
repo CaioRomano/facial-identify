@@ -1,22 +1,19 @@
-\# ADR 002: uv como gerenciador de pacotes
+# ADR 002: uv como gerenciador de pacotes
 
 
 
-\## Contexto
+## Contexto
 
 
 
-O projeto em Python precisa instalar as mesmas versões das bibliotecas em
-
-qualquer computador, no CI e dentro das imagens Docker. Também precisa
-
-instalar e fixar a versão do próprio Python. As alternativas consideradas
-
-foram o pip com venv e o Poetry.
+As bibliotecas usadas no projeto precisam ter as versões fixadas, para
+que as mesmas versões sejam instaladas em qualquer ambiente onde a
+aplicação rode. A instalação dessas bibliotecas também precisa ser
+simples e rápida.
 
 
 
-\## Decisão
+## Decisão
 
 
 
@@ -32,7 +29,7 @@ dependências de execução.
 
 
 
-\## Status
+## Status
 
 
 
@@ -40,23 +37,18 @@ Aceita.
 
 
 
-\## Consequências
+## Consequências
 
 
 
-\- O `uv.lock` garante as mesmas versões das bibliotecas em todos os
+- O `uv.lock` garante as mesmas versões das bibliotecas em todos os
 
 &#x20; ambientes.
 
-\- Uma única ferramenta cuida das bibliotecas e da versão do Python.
+- Uma única ferramenta cuida das bibliotecas e da versão do Python.
 
-\- Quem trabalhar no projeto precisa instalar o uv e mantê-lo atualizado,
+- Quem trabalhar no projeto precisa instalar o uv e mantê-lo atualizado,
 
-&#x20; porque a lista de versões do Python que ele oferece depende da versão
+&#x20; as versões do Python que ele consegue baixar dependem da versão do próprio uv.
 
-&#x20; do próprio uv.
-
-\- O uv é mais recente que o pip e o Poetry, então há menos material de
-
-&#x20; apoio sobre ele.
-
+- O uv é mais rápido na instalação dos pacotes e substitui diversas ferramentas, como o pip e Poetry e o venv, permitindo maior simplicidade de configuração.

@@ -1,36 +1,28 @@
-\# ADR 001: Python 3.13 como linguagem oficial do projeto
+# ADR 001: Python como linguagem oficial do projeto
 
 
 
-\## Contexto
+## Contexto
 
 
 
-O projeto precisa de uma linguagem principal para todos os seus serviços.
-
-O desenvolvedor tem mais conhecimento em Python do que em outras linguagens
-
-e já conhece boa parte das ferramentas previstas para o projeto. As
-
-bibliotecas de visão computacional que o projeto vai usar, como o OpenCV,
-
-têm suporte direto em Python e oferecem pacotes oficiais para a série 3.13.
+O projeto precisa de uma linguagem de programação que possa unir os componentes de reconhecimento, 
+gerenciamento do banco de dados e os demais componentes do projeto sob uma única linguagem. 
+O desenvolvedor, por sua vez, precisa trabalhar numa linguagem na qual esteja mais familiarizado, no intuito de 
+agilizar o desenvolvimento da aplicação. Além disso, principalmente na parte de reconhecimento facial e detecção de rosto, suas respectivas bibliotecas devem possuir suporte para a linguagem usada no projeto.
 
 
 
-\## Decisão
+## Decisão
 
 
 
-O Python é a linguagem oficial do projeto, na série 3.13, a partir da
-
-versão 3.13.18. A versão exata fica fixada no arquivo `.python-version`
-
-do repositório e é atualizada a cada nova correção de segurança da série.
+O Python é a linguagem oficial do projeto, da versão 3.13.18, por possuir suporte para os modelos de detecção de rosto e 
+reconhecimento facial a serem usados nesta versão da aplicação.
 
 
 
-\## Status
+## Status
 
 
 
@@ -38,29 +30,22 @@ Aceita.
 
 
 
-\## Consequências
+## Consequências
 
 
 
-\- O desenvolvimento avança mais rápido, porque usa a linguagem que o
+- O desenvolvimento avança mais rápido, porque usa a linguagem que o
 
 &#x20; desenvolvedor domina.
 
-\- O Python é mais lento que linguagens compiladas, mas o processamento
+- O Python é mais lento que linguagens compiladas, mas o processamento
 
 &#x20; pesado roda em código nativo dentro das bibliotecas.
 
-\- Para atender mais pedidos ao mesmo tempo, o projeto escala com mais
-
-&#x20; processos ou instâncias, por causa do GIL.
-
-\- A série 3.13 recebe apenas correções de segurança até outubro de 2028;
-
-&#x20; antes disso, o projeto precisa migrar para uma série mais nova.
-
-\- Subir de série exige confirmar antes que as bibliotecas do projeto têm
+- Subir de série exige confirmar antes que as bibliotecas do projeto têm
 
 &#x20; pacotes oficiais para ela.
 
-\- A variante sem GIL (free-threaded) não é usada.
+- A versão 3.14 não será usada.
 
+- versões futuras das bibliotecas podem deixar de suportar o Python 3.13.

@@ -2,7 +2,15 @@
 
 
 
+
+
+
+
 \## Contexto
+
+
+
+
 
 
 
@@ -18,7 +26,15 @@ modelos pré-treinados do InsightFace.
 
 
 
+
+
+
+
 \## Decisão
+
+
+
+
 
 
 
@@ -32,7 +48,15 @@ arquivo do modelo e a sua versão ficam fixados no projeto.
 
 
 
+
+
+
+
 \## Status
+
+
+
+
 
 
 
@@ -40,7 +64,15 @@ Aceita.
 
 
 
+
+
+
+
 \## Consequências
+
+
+
+
 
 
 
@@ -65,4 +97,6 @@ Aceita.
 &#x20; avaliação antes de uso real.
 
 \- Trocar de modelo exige recalcular os embeddings de todas as pessoas.
+
+
 

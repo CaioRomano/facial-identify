@@ -2,7 +2,15 @@
 
 
 
+
+
+
+
 \## Contexto
+
+
+
+
 
 
 
@@ -16,7 +24,15 @@ considerados o YuNet (OpenCV Zoo), os detectores do dlib e o SCRFD.
 
 
 
+
+
+
+
 \## Decisão
+
+
+
+
 
 
 
@@ -30,7 +46,15 @@ alinhamento. O arquivo do modelo e a sua versão ficam fixados no projeto.
 
 
 
+
+
+
+
 \## Status
+
+
+
+
 
 
 
@@ -38,7 +62,15 @@ Aceita.
 
 
 
+
+
+
+
 \## Consequências
+
+
+
+
 
 
 
@@ -63,4 +95,6 @@ Aceita.
 &#x20; exige revisar esta decisão.
 
 \- O desempenho precisa ser medido no aparelho onde a detecção vai rodar.
+
+
 
